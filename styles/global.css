@@ -1,0 +1,120 @@
+:root {
+    --white-color: rgb(225, 249, 236);
+    --green-color: rgb(50, 65, 60);
+    --blue-color: rgb(2, 47, 82);
+
+    --ffamily: Verdana, Geneva, Tahoma, sans-serif;
+
+    --text-font: 400 18px/1.25 var(--ffamily);
+    --text-font-mobile: 400 16px/1.25 var(--ffamily);
+
+    --border: 2px solid var(--blue-color);
+
+    --hover-transition: all 0.3s ease-in-out;
+}
+
+*,
+*::before,
+*::after {
+    font: var(--text-font);
+    color: var(--blue-color);
+}
+
+html {
+    overflow-x: hidden;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+input,
+textarea,
+button {
+    outline: none;
+    border: none;
+    background: transparent;
+}
+
+button {
+    cursor: pointer;
+}
+
+.container {
+    max-width: 1064px;
+    padding: 20px;
+    margin: auto;
+}
+
+.content {
+    margin-top: 100px;
+}
+
+.button {
+    padding: 10px 50px;
+    border: var(--border);
+
+    transition: var(--hover-transition);
+}
+
+.title {
+    font: 600 30px/1.25 var(--ffamily);
+}
+
+.logo {
+    color: var(--green-color);
+    font: 600 35px/1.25 var(--ffamily);
+}
+
+.button:hover,
+.button:focus {
+    background-color: var(--blue-color);
+    color: var(--white-color);
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    .content {
+        margin-top: 80px;
+    }
+
+    .button {
+        padding: 8px 40px;
+    }
+
+    .title {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 425px) {
+    *,
+    *::before,
+    *::after {
+        font: var(--text-font-mobile);
+    }
+    .container {
+        padding: 10px;
+    }
+
+    .content {
+        margin-top: 50px;
+    }
+
+    .button {
+        padding: 8px 30px;
+    }
+
+    .logo {
+        font-size: 30px;
+    }
+
+    .title {
+        font-size: 25px;
+    }
+}

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>MyNote</title>
+        <link rel="stylesheet" href="index.css" />
+    </head>
+    <body>
+        <header class="header">
+            <div class="header__content container">
+                <h1 class="header__content--title">Добро пожаловать в <span>MyNote</span></h1>
+                <p class="header__content--decription">
+                    Создавайте заметки и добавляйте в избранное
+                </p>
+                <button class="header__content--button button">Приступить</button>
+            </div>
+        </header>
+        <main class="main">
+            <div class="container">
+                <nav class="nav">
+                    <a href="/" class="logo">MyNote</a>
+
+                    <ul class="nav__list">
+                        <li class="nav__list--item">
+                            <a href="#notes" class="nav__list--link">Заметки</a>
+                        </li>
+                        <li class="nav__list--item">
+                            <a href="#create" class="nav__list--link">Создать</a>
+                        </li>
+                        <li class="nav__list--item">
+                            <a href="#favorites" class="nav__list--link">Избранное</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <nav class="mobile-nav">
+                    <div class="mobile-nav__header">
+                        <a href="/" class="logo">MyNote</a>
+                        <div class="burger">
+                            <span class="burger__item"></span>
+                            <span class="burger__item"></span>
+                            <span class="burger__item"></span>
+                        </div>
+                    </div>
+
+                    <ul class="nav__list">
+                        <li class="nav__list--item">
+                            <a href="#notes" class="nav__list--link">Заметки</a>
+                        </li>
+                        <li class="nav__list--item">
+                            <a href="#create" class="nav__list--link">Создать</a>
+                        </li>
+                        <li class="nav__list--item">
+                            <a href="#favorites" class="nav__list--link">Избранное</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <section class="content">
+                    <div class="create">
+                        <h2 class="create__title title">Создайте заметку</h2>
+                        <form action="#" class="create__form">
+                            <div class="create__form--item">
+                                <label for="heading" class="create__form--label">
+                                    Введите заголовок заметки
+                                </label>
+                                <input type="text" class="create__form--field" name="heading" />
+                            </div>
+                            <div class="create__form--item">
+                                <label for="text" class="create__form--label _textarea-label">
+                                    Введите текст заметки
+                                </label>
+                                <textarea
+                                    name="text"
+                                    class="create__form--field _textarea-field"
+                                    cols="100%"
+                                    rows="10"
+                                ></textarea>
+                            </div>
+                            <button class="create__form--button button">Добавить</button>
+                        </form>
+                    </div>
+
+                    <div class="notes active">
+                        <h3 class="notes__title title">Ваши заметки</h3>
+                        <div class="notes__item">
+                            <h3 class="notes__item--title">Название заметки</h3>
+                            <p class="notes__item--text">
+                                Далеко-далеко за словесными, горами в стране гласных и согласных
+                                живут рыбные тексты. Переписали курсивных, дорогу повстречался
+                                реторический сбить по всей о бросил, использовало послушавшись
+                                маленькая решила подпоясал даль своего оксмокс инициал за свое?
+                            </p>
+                            <div class="notes__control">
+                                <button class="notes__control--button button">
+                                    Удалить заметку
+                                </button>
+                                <button class="notes__control--button button">
+                                    Добавить в избранное
+                                </button>
+                            </div>
+                        </div>
+                        <div class="notes__item">
+                            <h3 class="notes__item--title">Название заметки</h3>
+                            <p class="notes__item--text">
+                                Далеко-далеко за словесными, горами в стране гласных и согласных
+                                живут рыбные тексты. Переписали курсивных, дорогу повстречался
+                                реторический сбить по всей о бросил, использовало послушавшись
+                                маленькая решила подпоясал даль своего оксмокс инициал за свое?
+                            </p>
+                            <div class="notes__control">
+                                <button class="notes__control--button button">
+                                    Удалить заметку
+                                </button>
+                                <button class="notes__control--button button">
+                                    Добавить в избранное
+                                </button>
+                            </div>
+                        </div>
+                        <div class="notes__item">
+                            <h3 class="notes__item--title">Название заметки</h3>
+                            <p class="notes__item--text">
+                                Далеко-далеко за словесными, горами в стране гласных и согласных
+                                живут рыбные тексты. Переписали курсивных, дорогу повстречался
+                                реторический сбить по всей о бросил, использовало послушавшись
+                                маленькая решила подпоясал даль своего оксмокс инициал за свое?
+                            </p>
+                            <div class="notes__control">
+                                <button class="notes__control--button button">
+                                    Удалить заметку
+                                </button>
+                                <button class="notes__control--button button">
+                                    Добавить в избранное
+                                </button>
+                            </div>
+                        </div>
+                        <div class="notes__item">
+                            <h3 class="notes__item--title">Название заметки</h3>
+                            <p class="notes__item--text">
+                                Далеко-далеко за словесными, горами в стране гласных и согласных
+                                живут рыбные тексты. Переписали курсивных, дорогу повстречался
+                                реторический сбить по всей о бросил, использовало послушавшись
+                                маленькая решила подпоясал даль своего оксмокс инициал за свое?
+                            </p>
+                            <div class="notes__control">
+                                <button class="notes__control--button button">
+                                    Удалить заметку
+                                </button>
+                                <button class="notes__control--button button">
+                                    Добавить в избранное
+                                </button>
+                            </div>
+                        </div>
+                        <div class="notes__item">
+                            <h3 class="notes__item--title">Название заметки</h3>
+                            <p class="notes__item--text">
+                                Далеко-далеко за словесными, горами в стране гласных и согласных
+                                живут рыбные тексты. Переписали курсивных, дорогу повстречался
+                                реторический сбить по всей о бросил, использовало послушавшись
+                                маленькая решила подпоясал даль своего оксмокс инициал за свое?
+                            </p>
+                            <div class="notes__control">
+                                <button class="notes__control--button button">
+                                    Удалить заметку
+                                </button>
+                                <button class="notes__control--button button">
+                                    Добавить в избранное
+                                </button>
+                            </div>
+                        </div>
+                        <div class="notes__item">
+                            <h3 class="notes__item--title">Название заметки</h3>
+                            <p class="notes__item--text">
+                                Далеко-далеко за словесными, горами в стране гласных и согласных
+                                живут рыбные тексты. Переписали курсивных, дорогу повстречался
+                                реторический сбить по всей о бросил, использовало послушавшись
+                                маленькая решила подпоясал даль своего оксмокс инициал за свое?
+                            </p>
+                            <div class="notes__control">
+                                <button class="notes__control--button button">
+                                    Удалить заметку
+                                </button>
+                                <button class="notes__control--button button">
+                                    Добавить в избранное
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="favorites">
+                        <h3 class="favorites__title title">Избранные заметки</h3>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <script src="index.js"></script>
+    </body>
+</html>
