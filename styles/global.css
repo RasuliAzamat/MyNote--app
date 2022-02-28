@@ -42,6 +42,20 @@ button {
     cursor: pointer;
 }
 
+a {
+    outline: none;
+    color: inherit;
+    text-decoration: none;
+}
+
+html {
+    overflow: hidden;
+}
+
+html.unlock {
+    overflow: auto;
+}
+
 .container {
     max-width: 1064px;
     padding: 20px;
