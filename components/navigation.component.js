@@ -17,7 +17,15 @@ export class NavigationComponent extends Component {
 function navigationHandler(event) {
     event.preventDefault();
 
+    if (event.target.classList.contains('burger')) {
+        this.$element.classList.toggle('active');
+        document.documentElement.classList.toggle('block-scroll');
+    }
+
     if (event.target.classList.contains('nav__list--link')) {
+        this.$element.classList.remove('active');
+        document.documentElement.classList.remove('block-scroll');
+
         const links = Array.from(this.$element.querySelectorAll('.nav__list--link'));
 
         for (const link of links) {

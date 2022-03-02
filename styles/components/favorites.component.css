@@ -1,0 +1,27 @@
+.favorites__title {
+    margin-bottom: 30px;
+}
+
+.favorites__list--item {
+    margin: 0 0 5px 5px;
+}
+
+.favorites__list--item:last-child {
+    margin-bottom: 0;
+}
+
+.favorites__list--link {
+    position: relative;
+
+    transition: var(--hover-transition);
+}
+
+.favorites__list--link:hover {
+    opacity: 0.7;
+}
+
+@media (max-width: 800px) {
+    .favorites__title {
+        margin-bottom: 20px;
+    }
+}

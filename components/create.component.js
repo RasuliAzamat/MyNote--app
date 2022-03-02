@@ -12,8 +12,8 @@ export class CreateComponent extends Component {
         this.$element.addEventListener('submit', submitHandler.bind(this));
 
         this.form = new Form(this.$element, {
-            heading: [Validators.isFulled, Validators.maxLength(30)],
-            text: [Validators.isFulled, Validators.minLength(10)],
+            heading: [Validators.isFulled, Validators.maxLength(20)],
+            text: [Validators.isFulled, Validators.minLength(30)],
         });
     }
 }

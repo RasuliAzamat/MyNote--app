@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -20,7 +20,14 @@
         <main class="main">
             <div class="container">
                 <nav class="nav" id="navigation">
-                    <a href="/" class="logo">MyNote</a>
+                    <div class="nav__header">
+                        <a href="index.html" class="logo">MyNote</a>
+                        <div class="burger">
+                            <span class="burger__item"></span>
+                            <span class="burger__item"></span>
+                            <span class="burger__item"></span>
+                        </div>
+                    </div>
 
                     <ul class="nav__list">
                         <li class="nav__list--item">
@@ -38,29 +45,6 @@
                         </li>
                     </ul>
                 </nav>
-
-                <!-- <nav class="mobile-nav" id="navigation">
-                    <div class="mobile-nav__header">
-                        <a href="/" class="logo">MyNote</a>
-                        <div class="burger">
-                            <span class="burger__item"></span>
-                            <span class="burger__item"></span>
-                            <span class="burger__item"></span>
-                        </div>
-                    </div>
-
-                    <ul class="nav__list">
-                        <li class="nav__list--item">
-                            <a href="#notes" class="nav__list--link">Заметки</a>
-                        </li>
-                        <li class="nav__list--item">
-                            <a href="#create" class="nav__list--link">Создать</a>
-                        </li>
-                        <li class="nav__list--item">
-                            <a href="#favorites" class="nav__list--link">Избранное</a>
-                        </li>
-                    </ul>
-                </nav> -->
 
                 <section class="content">
                     <form action="#" class="create create__form active" id="create">
@@ -101,7 +85,17 @@
                     </div>
 
                     <div class="favorites" id="favorites">
-                        <h3 class="favorites__title title" >Избранные заметки</h3>
+                        <div class="favorites__head">
+                            <h3 class="favorites__title title">Избранные заметки</h3>
+
+                            <div class="loader-box" id="loader">
+                                <div class="loader-container">
+                                    <div class="loader-bubble loader-bubble-1"></div>
+                                    <div class="loader-bubble loader-bubble-2"></div>
+                                    <div class="loader-bubble loader-bubble-3"></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </div>

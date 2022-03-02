@@ -5,13 +5,12 @@ export function renderNote(note, options = {}) {
         </button>
         `;
 
+    const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    const candidate = favorites.find((favoritesItem) => favoritesItem.id === note.id);
+
     const favoriteButton = `
         <button class="notes__control--button button" data-name="favoriteBtn" data-id="${note.id}">
-            ${
-                (localStorage.getItem('favorites') || []).includes(note.id)
-                    ? 'Удалить из избранного'
-                    : 'Добавить в избранное'
-            }
+            ${candidate ? 'Удалить из избранного' : 'Добавить в избранное'}
         </button>
     `;
     return `

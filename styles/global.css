@@ -2,6 +2,7 @@
     --white-color: rgb(225, 249, 236);
     --green-color: rgb(50, 65, 60);
     --blue-color: rgb(2, 47, 82);
+    --light-color: rgb(246, 246, 246);
 
     --ffamily: Verdana, Geneva, Tahoma, sans-serif;
 
@@ -16,12 +17,16 @@
 *,
 *::before,
 *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
     font: var(--text-font);
     color: var(--blue-color);
 }
 
-html {
-    overflow-x: hidden;
+html.block-scroll {
+    overflow: hidden;
 }
 
 ul,
@@ -33,7 +38,6 @@ li {
 input,
 textarea,
 button {
-    outline: none;
     border: none;
     background: transparent;
 }
@@ -43,17 +47,8 @@ button {
 }
 
 a {
-    outline: none;
     color: inherit;
     text-decoration: none;
-}
-
-html {
-    overflow: hidden;
-}
-
-html.unlock {
-    overflow: auto;
 }
 
 .container {
@@ -82,10 +77,25 @@ html.unlock {
     font: 600 35px/1.25 var(--ffamily);
 }
 
-.button:hover,
-.button:focus {
+.button:hover {
     background-color: var(--blue-color);
     color: var(--white-color);
+}
+
+.loader-box,
+.header,
+.favorites,
+.notes,
+.create {
+    display: none;
+}
+
+.loader-box.active,
+.header.active,
+.favorites.active,
+.notes.active,
+.create.active {
+    display: block;
 }
 
 @media (max-width: 768px) {
@@ -102,7 +112,7 @@ html.unlock {
     }
 
     .title {
-        font-size: 28px;
+        font-size: 30px;
     }
 }
 
@@ -124,11 +134,7 @@ html.unlock {
         padding: 8px 30px;
     }
 
-    .logo {
-        font-size: 30px;
-    }
-
     .title {
-        font-size: 25px;
+        font-size: 23px;
     }
 }

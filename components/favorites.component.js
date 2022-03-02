@@ -14,6 +14,7 @@ export class FavoritesComponent extends Component {
 
     onShow() {
         const favorites = JSON.parse(localStorage.getItem('favorites'));
+
         const html = renderList(favorites);
 
         this.$element.insertAdjacentHTML('beforeend', html);
@@ -30,16 +31,17 @@ async function linkHandler(event) {
     event.preventDefault();
 
     if (event.target.classList.contains('favorites__list--link')) {
-        const noteId = event.target.textContent;
-
-        event.target.innerHTML = '';
+        const noteId = event.target.dataset.id;
 
         this.loader.show();
 
+        event.target.innerHTML = '';
+
         const note = await apiService.getNoteById(noteId);
-        this.$element.insertAdjacentHTML('beforeend', renderNote(note, { withButton: false }));
 
         this.loader.hide();
+
+        this.$element.insertAdjacentHTML('beforeend', renderNote(note, { withButton: false }));
     }
 }
 
@@ -50,7 +52,7 @@ function renderList(list = []) {
             ${list
                 .map(
                     (listItem) => `<li class="favorites__list--item">
-                    <a href="#" class="favorites__list--link">${listItem}</a>
+                    <a href="#" class="favorites__list--link" data-id="${listItem.id}">${listItem.title}</a>
                 </li>`
                 )
                 .join(' ')}
