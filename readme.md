@@ -8,10 +8,9 @@
 
 [Просмотр (версия 1)](https://rasuliazamat.github.io/MyNote--app/)
 
-<div style="display: flex;">
-    <img src="assets/myNote-view-1.png" alt="2022-02-20-6" border="0" style="width: 33%;">
-    <img src="assets/myNote-view-2.png" alt="2022-02-20-6" border="0" style="width: 33%;">
-    <img src="assets/myNote-mibile-view.png" alt="2022-02-20-6" border="0" style="width: 33%; ">
+<div style="display: flex">
+    <img src="assets/myNote-view-1.png" alt="2022-02-20-6" border="0" style="width: 49%">
+    <img src="assets/myNote-view-2.png" alt="2022-02-20-6" border="0" style="width: 49%">
 </div>
 
 ---
