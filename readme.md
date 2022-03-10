@@ -1,4 +1,4 @@
-# My Note
+# MyNote
 
 Удобное и функциональное приложение для заметок.
 Можно создавать, добавлять в избранное и удалять от туда,
@@ -6,7 +6,7 @@
 Ипользуется подход инкапсуляции кода по компонентам.
 Это дает расширяемую архитектуру приложения.
 
-[Просмотр (версия 1)](https://rasuliazamat.github.io/MyNote--app/)
+[Просмотр (версия 1)](https://rasuliazamat.github.io/mynote/)
 
 <div style="display: flex">
     <img src="assets/myNote-view-1.png" alt="2022-02-20-6" border="0" style="width: 49%">
