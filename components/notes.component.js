@@ -28,7 +28,7 @@ export class NotesComponent extends Component {
         } catch (error) {
             const errorText = `<p>Вы пока ничего не добавляли в Заметки</p>`;
             this.$element.insertAdjacentHTML('beforeend', errorText);
-            
+
             this.loader.hide();
         }
     }
@@ -40,7 +40,7 @@ export class NotesComponent extends Component {
     }
 }
 
-function buttonHandler(event) {
+async function buttonHandler(event) {
     const target = event.target;
     const id = target.dataset.id;
     const name = target.dataset.name;
@@ -70,7 +70,16 @@ function buttonHandler(event) {
         favorites = favorites.filter((favoritesItem) => favoritesItem.id !== id);
         localStorage.setItem('favorites', JSON.stringify(favorites));
 
-        apiService.deleteById(id);
+        await apiService.deleteById(id);
         noteItem.remove();
+
+        const firebaseData = await apiService.getNote();
+
+        const notes = TransformService.firebaseObjectToArray(firebaseData);
+
+        if (!notes) {
+            const errorText = `<p>Список заметок пуст</p>`;
+            this.$element.insertAdjacentHTML('beforeend', errorText);
+        }
     }
 }

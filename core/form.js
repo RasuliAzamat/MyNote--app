@@ -46,7 +46,7 @@ function showError($input) {
 
     $input.closest('.create__form--item').classList.add('error');
 
-    const error = `<p class="create__form--error">Введите корректное значение</p>`;
+    const error = `<p class="create__form--error">Минимальная длина текста 5 символов</p>`;
     $input.insertAdjacentHTML('afterend', error);
 }
 
